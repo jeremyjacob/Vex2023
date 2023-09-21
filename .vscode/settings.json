@@ -1,0 +1,10 @@
+{
+	"files.associations": {
+		"*.postcss": "tailwindcss",
+		"*.svx": "markdown",
+		"*.primsa": "prisma",
+		".dev.vars": "properties",
+		".env.ts": "typescript",
+		"ios": "cpp"
+	}
+}
