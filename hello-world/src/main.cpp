@@ -44,7 +44,7 @@ void on_center_button()
 void initialize()
 {
 	pros::lcd::initialize();
-	pros::lcd::set_text(1, "Hello PROS User!");
+	pros::lcd::set_text(1, "Hello World!");
 
 	pros::lcd::register_btn1_cb(on_center_button);
 }
@@ -92,7 +92,9 @@ void autonomous()
 	back_left.move_relative(tile * 3.25, 20);
 	back_right.move_relative(tile * 3.25, 20);
 
-	while (!((front_left.get_position() < tile * 3.25 + check_tolerance) && (front_left.get_position() > tile * 3.25 - check_tolerance)))
+	while (
+		!(
+			(front_left.get_position() < tile * 3.25 + check_tolerance) && (front_left.get_position() > tile * 3.25 - check_tolerance)))
 	{
 		pros::delay(2);
 	}
